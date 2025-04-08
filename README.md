@@ -1,5 +1,4 @@
-## Repo for not timing out on teams or trolling your friends
-
-- The tool is written in vbscript, it allows to send keyboard strokes (up and down) every 3 to 2 seconds.
-- To execute only run the hta file.
-- It also allows to pause the script or killing it completely.
+## Repo for Preventing Timeout on Teams or Trolling Your Friends
+- This tool is written in VBScript and sends keyboard strokes (up and down arrows) every 2 to 3 seconds.
+- To execute, simply run the HTA file.
+- The script can be paused or terminated completely.
