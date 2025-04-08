@@ -1,0 +1,55 @@
+<head>
+<title>Script for not timing out</title>
+<HTA:APPLICATION 
+     APPLICATIONNAME="Script for not timing out"
+	 BORDER="thick"
+	 CAPTION="yes"
+     SCROLL="yes"
+     SINGLEINSTANCE="yes"
+	 SHOWINTASKBAR="yes"     
+>
+</head>
+<script language="VBScript">
+	'Creation of Script OBJ'
+	set WshShell = CreateObject ("Wscript.Shell")
+	'Creation of interval variables'
+	Dim TimerIntervalDown, TimerIntervalUp
+		 	
+	Sub Window_onLoad
+	    'Resizes window onload event'
+		window.resizeTo 450,400
+	End Sub
+    
+	Sub LoadScript
+		TimerIntervalUp = window.setInterval("KeyDownUwU",2000)
+		TimerIntervalDown = window.setInterval("KeyUpUwU",3000)
+	End sub
+
+	Sub KeyDownUwU
+		WshShell.SendKeys "{DOWN}"
+	End sub
+
+	Sub KeyUpUwU
+		 WshShell.SendKeys "{UP}"  
+	End sub
+	
+	Sub EndScript
+		window.clearInterval(TimerIntervalUp)
+		window.clearInterval(TimerIntervalDown)
+		MsgBox "Cerrando..."
+		window.close
+	End Sub
+
+	Sub PauseScript
+		window.clearInterval(TimerIntervalUp)
+		window.clearInterval(TimerIntervalDown)
+		MsgBox "Pausado"
+	End Sub
+	
+</script>
+
+<body>
+<input type="button" value="Run Script" name="run_button"  onClick="LoadScript"><p> 
+<input type="button" value="Pause Script" name="pause_button" onClick="PauseScript"><p>
+<input type="button" value="Stop Script/Close " name="stop_button"  onClick="EndScript"><p> 
+</body>
